@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="signup-container">
+        <form action="signup1.php" method="POST">
+           <fieldset> 
+            <legend>Sign Up</legend>
+            <label>Username</label>
+            <br/>
+            <input type="text" name="username" reqired/>
+            <br/>
+            <label>Name</label>
+            <br/>
+            <input type="text" name="name" required/>
+            <br/>
+            <label>Staff ID</label>
+            <br/>
+            <input type="text" name="StaffID" required/>
+            <br/>
+            <label>Password</label>
+            <br/>
+            <input type="password" name="password" required/>
+            <br/>
+            <label>Department/Unit</label>
+            <br/>
+            <input type="text" name="department" required/>
+            <br/>
+            <label>Chose type of user</label>
+            <br/>
+            <select name="users" id="users">
+                <option value="user">User</option>
+                <option value="admin">Admin</option> 
+            </select>
+            <br/>
+            <input type="submit" name="submit" value="Sign up" />
+           </fieldset> 
+        </form>
+    </div>
+</body>
+</html>
