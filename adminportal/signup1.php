@@ -1,4 +1,7 @@
 <?php 
+
+require_once('../conn.php');
+
 //Connection to a database 
 $servername = "localhost";
 $user= "root";

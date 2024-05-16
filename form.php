@@ -1,5 +1,7 @@
 <?php
 
+require_once('conn.php');
+
 if(isset($_POST['submit'])){
   //Getting and storing inputs in variables
   $firstName= $_POST['firstName'];
@@ -13,21 +15,7 @@ if(isset($_POST['submit'])){
   $feedbackType= $_POST['feedbackType'];
   $feedback= $_POST['feedback'];
 
-  //Database details
-  $servername= "localhost";
-  $username= "root";
-  $password= "10835954enoch";
-  $dbname= "client_complaint_form";
   
-  //Create connection
-$conn= mysqli_connect($servername, $username, $password, $dbname);
-
-//Check if connection is working
-if(!$conn)
-{
-  die("Connection failed: ".mysqli_connect_error());
-}
-echo "<p>Connected successfully</p>";
 //Code to send data from form entries to database
 $sql="INSERT INTO complaint (id, firstName, lastName, dob, sex, phone, email, ad, vulnerability, type_of_feedback, feedback) VALUES ('0', '$firstName', '$lastName', '$dob', '$sex', '$phone', '$email', '$address', '$vulnerability', '$feedbackType', '$feedback')";
 
