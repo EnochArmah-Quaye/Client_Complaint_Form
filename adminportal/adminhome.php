@@ -15,6 +15,6 @@
 </head>
 <body>
     <h1>THIS IS ADMIN HOME PAGE</h1><?php echo $_SESSION["username"] ?>
-    <a href="logout.php">Logout</p>
+    <a href="../logout.php">Logout</p>
 </body>
 </html>

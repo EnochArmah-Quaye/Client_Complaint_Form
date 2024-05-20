@@ -16,7 +16,28 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
     $rsl=mysqli_query($conn,$sql);
 
-    $row=mysqli_fetch_array($rsl);
+    if(mysqli_num_rows($rsl) == 1){
+        $row = mysqli_fetch_assoc($rsl);
+
+        //Check usertype
+        if($row['usertype'] == 'admin'){
+            $_SESSION['username'] = $username;
+            $_SESSION['usertype'] = 'admin';
+            header("Location:adminhome.php");
+        } 
+        else if ($row['usertype'] == 'user'){
+            $_SESSION['username'] = $username;
+            $_SESSION['usertype'] = 'user';
+            header("Location:userhome.php");
+          }
+          else{
+            echo "Invalid username lor password";
+          }
+          exit();
+    }
+
+    /*$row=mysqli_fetch_array($rsl);
+
 
     if($row["usertype"]=="user")
     {
@@ -30,6 +51,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     }
     else{
         echo "<p> Username and Password Incorrect</p>";
-    }
+    }*/
 }
 ?>
