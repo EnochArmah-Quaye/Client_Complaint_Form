@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../dist/css/main.css">
+<script src="../js/bootstrap.bundle.min.js"></script>
 <title>Login Page</title>
 <style>
     body {
@@ -48,17 +50,26 @@
     .login-container input[type="submit"]:hover {
         background-color: #45a049;
     }
+    #bt{
+        margin-top: 10px;
+    }
+    #bt a{
+        text-decoration-line:none;
+        color: white;
+    }
 </style>
 </head>
 <body>
 <div class="login-container">
     <h2>ADMIN LOGIN</h2>
     <form action="login2.php" method="POST">
-        <input type="text" name="userName" placeholder="Username" required>
-        <input type="password" name="password2" placeholder="Password" required>
-        <input type="submit"  value="Login">
+        
+          <input type="text" name="userName" placeholder="Username" required>
+          <input type="password" name="password2" placeholder="Password" required>
+          <input type="submit"  value="Login">
+        
     </form>
-    <div><a href="signup.html">Sign up</a></div>
+    <button type="button" class="btn btn-primary" id="bt" ><a href="signup.html">Sign up</a></button>
 </div>
 </body>
 </html>
