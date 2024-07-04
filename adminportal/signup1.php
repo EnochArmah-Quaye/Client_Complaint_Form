@@ -13,7 +13,7 @@ if(isset($_POST['submit'])){
     $department= $_POST['department'];
     $usertype= $_POST['users'];
 
-    //Creatio of query statement
+    //Creation of query statement
     $sql="INSERT INTO signup (id,username,name1,staff_id,password1,department_unit,usertype) VALUES('0','$username','$name','$staff','$password','$department','$usertype')";
     
     $rsl= mysqli_query($conn,$sql);
