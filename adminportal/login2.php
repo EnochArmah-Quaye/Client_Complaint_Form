@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             header("Location:userhome.php");
           }
           else{
-            echo "Invalid username lor password";
+            echo "Invalid username or password";
           }
           exit();
     }
